@@ -95,7 +95,7 @@
 .rs-about__logo_title {
   position: relative;
   white-space: nowrap;
-  right: -7vw;
+  right: 0;
   font-weight: 400;
   font-size: 9.6vw;
   line-height: 120%;

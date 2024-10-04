@@ -113,14 +113,23 @@
 	// .rs-project__list
 	&__list {
 		counter-reset: project;
+		height: 100vh;
 	}
 
 	// .rs-project__item
 	&__item {
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		z-index: 10;
 		border-left: 1px solid #ddd;
 		border-right: 1px solid #ddd;
 		margin: -1px;
 		padding: 55px;
+		background-color: #fff;
 
 		&:before {
 			counter-increment: project;
@@ -172,6 +181,11 @@
 	// .rs-project__content
 	&__content {
 		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
 
 		@media (min-width: 991.98px) {
 			max-width: 1219px;
@@ -285,6 +299,7 @@
 	&__imgs {
 		margin-top: 55px;
 		display: flex;
+		flex-grow: 1;
 		gap: 30px;
 
 		@media (max-width: 1439.98px) {
@@ -304,6 +319,7 @@
 	// .rs-project__img
 	&__img {
 		width: 100%;
+		height: 100%;
 
 		@media (min-width: 767.98px) {
 			&:nth-child(1) {

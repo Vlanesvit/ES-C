@@ -124,7 +124,8 @@
 		max-width: 737px;
 		position: absolute;
 		bottom: 18px;
-		right: -15vw;
+		right: 0;
+		// right: -15vw;
 
 		@media (max-width: 1439.98px) {
 			max-width: 600px;

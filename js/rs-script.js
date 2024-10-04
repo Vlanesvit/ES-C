@@ -111,7 +111,6 @@ function marquee() {
 }
 marquee()
 
-
 /* ====================================
 Табы
 ==================================== */
@@ -259,6 +258,31 @@ function tabs() {
 if (document.querySelector('[data-tabs]')) {
 	tabs()
 }
+
+// Функция анимации для указанного блока
+function animateBlockFromRightToLeft(targetBlock) {
+	const blocks = document.querySelectorAll(targetBlock);
+	blocks.forEach(block => {
+		// Настраиваем анимацию с GSAP и ScrollTrigger
+		gsap.fromTo(block,
+			{ x: '100%' },  // Начальное положение: за пределами справа
+			{
+				x: '0%',                 // Конечное положение: в исходном месте
+				duration: 1,             // Длительность анимации
+				ease: 'none',            // Убираем замедление для равномерного движения
+				scrollTrigger: {
+					trigger: block,     // Блок, который анимируем
+					start: 'top-=300% bottom',      // Начало анимации, когда верх блока достигает низа экрана
+					end: 'bottom top',        // Конец анимации, когда низ блока достигает верха экрана
+					scrub: true,               // Привязываем анимацию к скроллу
+					// markers: true,
+				}
+			}
+		);
+	});
+}
+animateBlockFromRightToLeft('.rs-about__logo_title');
+animateBlockFromRightToLeft('.rs-parallax__logo');
 
 // Обработа медиа запросов из атрибутов 
 function dataMediaQueries(array, dataSetValue) {
