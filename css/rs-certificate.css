@@ -1,0 +1,108 @@
+@media (min-width: 767.98px) {
+  .rs-certificate__wrapper {
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+  }
+}
+.rs-certificate__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.rs-certificate__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+@media (min-width: 767.98px) {
+  .rs-certificate__item {
+    border-left: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-certificate__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .rs-certificate__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.rs-certificate__item a {
+  padding: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1439.98px) {
+  .rs-certificate__item a {
+    padding: 42.5px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-certificate__item a {
+    padding: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-certificate__item a {
+    padding: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-certificate__item a {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.rs-certificate__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rs-certificate__desc img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 8px;
+}
+.rs-certificate__desc p {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+@media (max-width: 767.98px) {
+  .rs-certificate__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .rs-certificate__btn .rs-btn {
+    width: 100%;
+  }
+}

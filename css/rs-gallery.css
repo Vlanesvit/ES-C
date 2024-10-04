@@ -1,0 +1,28 @@
+.rs-gallery__wrapper {
+  padding: 40px;
+  border: 1px solid #dddddd;
+}
+@media (max-width: 1439.98px) {
+  .rs-gallery__wrapper {
+    padding: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-gallery__wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: none;
+    border-right: none;
+  }
+}
+.rs-gallery__slider {
+  overflow: visible;
+}
+.rs-gallery__pagination {
+  margin-top: 40px;
+}
+@media (max-width: 1439.98px) {
+  .rs-gallery__pagination {
+    margin-top: 20px;
+  }
+}

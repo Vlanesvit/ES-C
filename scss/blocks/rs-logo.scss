@@ -1,0 +1,89 @@
+.rs-logo {
+	.section {
+		// .section__wrapper
+		&__wrapper {
+			@media (min-width: 1439.98px) {
+				padding-top: 101px;
+			}
+		}
+
+		&__header {
+			@media (min-width: 1439.98px) {
+				padding-bottom: 60px;
+			}
+		}
+	}
+
+	&__wrapper {
+		@media (min-width: 767.98px) {
+			padding: 55px 85px;
+			border: 1px solid #ddd;
+
+			@media (max-width: 1439.98px) {
+				padding: 42.5px;
+			}
+
+			@media (max-width: 1169.98px) {
+				padding: 30px;
+			}
+
+			@media (max-width: 991.98px) {
+				padding: 24px;
+			}
+		}
+	}
+
+	// .rs-logo__slider
+	&__slider {
+	}
+
+	// .rs-logo__swiper
+	&__swiper {
+	}
+
+	// .rs-logo__slide
+	&__slide {
+		min-height: 1px;
+		height: auto;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.rs-logo__img {
+					&::after {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// .rs-logo__img
+	&__img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background-color: #fff;
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 98%;
+			height: 98%;
+			background-color: #aeb6c0;
+			mix-blend-mode: color;
+			pointer-events: none;
+			transition: opacity 0.3s ease 0s;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
