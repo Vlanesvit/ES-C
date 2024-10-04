@@ -238,6 +238,8 @@ function tabs() {
 				}
 			});
 		}
+
+		ScrollTrigger.refresh();
 	}
 	function setTabsAction(e) {
 		const el = e.target;
@@ -253,6 +255,8 @@ function tabs() {
 			}
 			e.preventDefault();
 		}
+
+		ScrollTrigger.refresh();
 	}
 }
 if (document.querySelector('[data-tabs]')) {
