@@ -513,7 +513,7 @@
 				@media (min-width: 1169.98px) {
 					@media (any-hover: hover) {
 						&:hover {
-							& > .menu__dropdown_block {
+							& > ul {
 								opacity: 1;
 								visibility: visible;
 								transform: translateY(0px);
@@ -522,7 +522,7 @@
 					}
 
 					&._open-menu {
-						& > .menu__dropdown_block {
+						& > ul {
 							opacity: 1;
 							visibility: visible;
 							transform: translateY(0px);
@@ -539,14 +539,14 @@
 							}
 						}
 
-						& > .menu__dropdown_block {
+						& > ul {
 							transform: translateX(0%);
 						}
 					}
 				}
 
-				// .menu__dropdown_block
-				&_block {
+				// .menu__dropdown_list
+				&_list {
 					position: absolute;
 					z-index: 99;
 					transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -598,46 +598,47 @@
 					}
 
 					.switch-back {
-						width: 100%;
-						text-align: center;
-						padding: 20px 14px;
-						font-weight: 400;
-						font-size: 14px;
-						// line-height: 18px;
-						line-height: 130%;
-						color: #141517;
-						border-bottom: 1px solid #d4d7e5;
-						position: relative;
+						padding: 0;
 
-						@media (min-width: 1169.98px) {
-							display: none;
-						}
+						& > a {
+							font-family: "BOWLER", sans-serif;
+							width: 100%;
+							text-align: center;
+							justify-content: center;
+							padding: 20px 14px;
+							font-weight: 400;
+							font-size: 14px;
+							// line-height: 18px;
+							line-height: 130%;
+							color: #141517;
+							border-bottom: 1px solid #d4d7e5;
+							position: relative;
 
-						&::before {
-							content: "";
-							position: absolute;
-							left: 36px;
-							top: 50%;
-							transform: translateY(-50%);
-							display: block;
-							width: 12px;
-							height: 12px;
-							background-image: url("../img/icons/caret-back.svg");
-							background-repeat: no-repeat;
-							background-position: center;
-							background-size: contain;
-							transition: all 0.3s ease 0s;
+							@media (min-width: 1169.98px) {
+								display: none;
+							}
 
-							@media (max-width: 767.98px) {
-								left: 16px;
+							&::before {
+								content: "";
+								position: absolute;
+								left: 36px;
+								top: 50%;
+								transform: translateY(-50%);
+								display: block;
+								width: 12px;
+								height: 12px;
+								background-image: url("../img/icons/caret-back.svg");
+								background-repeat: no-repeat;
+								background-position: center;
+								background-size: contain;
+								transition: all 0.3s ease 0s;
+
+								@media (max-width: 767.98px) {
+									left: 16px;
+								}
 							}
 						}
 					}
-				}
-
-				// .menu__dropdown_list
-				&_list {
-					width: 100%;
 
 					@media (min-width: 1169.98px) {
 						li {
@@ -655,6 +656,9 @@
 					}
 
 					& > li {
+						padding-top: 0px;
+						padding-bottom: 0px;
+
 						> a {
 							font-family: "Manrope", sans-serif;
 							font-weight: 500;

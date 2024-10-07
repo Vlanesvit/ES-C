@@ -32,23 +32,35 @@ function menuFunction() {
 
 			// Все пункты с выпадающим меню
 			const menuItemDropdowns = menu.querySelectorAll('.menu__list .menu__dropdown');
-			const menuItemDropdownsMenu = menu.querySelectorAll('.menu__list .menu__dropdown_block');
+			const menuItemDropdownsMenu = menu.querySelectorAll('.menu__list .menu__dropdown_list');
+
+			// Блок с контактами
+			const contactBlock = menu.querySelector('.menu__contact');
 
 			// 0-ой уровень
 			const menuItemDropdownsNull = menu.querySelectorAll('.menu__list > .menu__dropdown');
-			const menuItemDropdownsMenuNull = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block');
+			const menuItemDropdownsMenuNull = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list');
 
 			// 1-ый уровень
-			const menuItemDropdownsFirst = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown');
-			const menuItemDropdownsMenuFirst = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block');
+			const menuItemDropdownsFirst = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown');
+			const menuItemDropdownsMenuFirst = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list');
 
 			// 2-ой уровень
-			const menuItemDropdownsTwo = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown');
-			const menuItemDropdownsMenuTwo = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block');
+			const menuItemDropdownsTwo = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown');
+			const menuItemDropdownsMenuTwo = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list');
 
 			// 3-ий уровень
-			const menuItemDropdownsThree = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown  > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown');
-			const menuItemDropdownsMenuThree = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_block');
+			const menuItemDropdownsThree = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown');
+			const menuItemDropdownsMenuThree = menu.querySelectorAll('.menu__list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list > .menu__dropdown > .menu__dropdown_list');
+
+			if (contactBlock) {
+				menuItemDropdownsMenu.forEach(menuDropdown => {
+					// Клонируем блок .menu__contact
+					const contactClone = contactBlock.cloneNode(true);
+					// Вставляем клон в конец блока .menu__dropdown_list
+					menuDropdown.appendChild(contactClone);
+				});
+			}
 
 			// Добавляем иконки в пункты с выпадающим меню
 			menuItemDropdowns.forEach(item => {
@@ -62,7 +74,7 @@ function menuFunction() {
 			function openLvlMenu(li, ul) {
 				li.forEach(item => {
 					const menuItemIcons = item.querySelector('.menu__dropdown_arrow');
-					const menuItemButtonClose = item.querySelector('.switch-back');
+					const menuSwitch = menu.querySelector('.switch-back');
 
 					// Раскрываем меню при клике на иконку
 					menuItemIcons.addEventListener('click', (e) => {
@@ -84,9 +96,9 @@ function menuFunction() {
 						}
 					});
 
-					menuItemButtonClose.addEventListener('click', (e) => {
+					menuSwitch.addEventListener('click', (e) => {
 						e.preventDefault();
-						menuItemIcons.closest('.menu__dropdown').classList.remove('_open-menu');
+						item.closest('.menu__dropdown').classList.remove('_open-menu');
 						document.documentElement.classList.remove('dropdown-menu-open');
 					})
 				});
