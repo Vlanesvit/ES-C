@@ -1,6 +1,51 @@
 .rs-about .section__wrapper {
   padding-bottom: 60px;
 }
+.rs-about {
+}
+.rs-about ol {
+    padding: 0;
+    margin: 0;	   
+	margin-bottom: 15px;
+	list-style-position: inside;
+}
+.rs-about ol li {
+    position: relative;
+	font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 138%;
+    letter-spacing: 0.03em;
+	color: #5F5F5F;
+	margin-bottom:  10px;
+}
+.rs-about ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	margin-bottom: 15px;
+}
+.rs-about ul li {
+    position: relative;
+	font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 138%;
+    letter-spacing: 0.03em;
+	color: #5F5F5F;
+	margin-bottom:  10px;
+}
+.rs-about ul li:before {
+    padding-right: 8px;
+    content: "—";	
+    color: #5F5F5F;
+    left: 0;
+    top: 4px;
+    display: inline-block;    
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 @media (max-width: 991.98px) {
   .rs-about .section__wrapper {
     padding-bottom: 50px;

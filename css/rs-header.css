@@ -395,6 +395,7 @@
 }
 @media (max-width: 1169.98px) {
   .rs-header__menu .menu__list li {
+	position: unset !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
