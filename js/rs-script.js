@@ -45,7 +45,21 @@ addLoadedClass()
 Fancybox
 ==================================== */
 Fancybox.bind("[data-fancybox]", {
-	// Your custom options
+	Thumbs: {
+		type: 'classic',
+	},
+	Toolbar: {
+		display: {
+			left: ['prev'], // Левая кнопка
+			middle: ['infobar'], // Информация по центру
+			right: ['next'], // Правая кнопка и кнопка закрытия
+		},
+	},
+	Carousel: {
+		Navigation: {
+			arrows: false, // Включаем стрелки навигации
+		},
+	},
 });
 
 /* ====================================
