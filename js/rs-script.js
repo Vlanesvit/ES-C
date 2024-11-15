@@ -42,6 +42,13 @@ function addLoadedClass() {
 addLoadedClass()
 
 /* ====================================
+Fancybox
+==================================== */
+Fancybox.bind("[data-fancybox]", {
+	// Your custom options
+});
+
+/* ====================================
 Бегущая строка
 ==================================== */
 function marquee() {
