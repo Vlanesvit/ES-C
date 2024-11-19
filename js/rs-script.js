@@ -60,6 +60,9 @@ Fancybox.bind("[data-fancybox]", {
 			arrows: false, // Включаем стрелки навигации
 		},
 	},
+	compact: false,
+	idle: false,
+	dragToClose: false,
 });
 
 /* ====================================
