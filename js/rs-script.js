@@ -56,13 +56,20 @@ Fancybox.bind("[data-fancybox]", {
 		},
 	},
 	Carousel: {
+		transition: "fade",
+		duration: 500,
+
 		Navigation: {
-			arrows: false, // Включаем стрелки навигации
+			arrows: false,
 		},
 	},
 	compact: false,
 	idle: false,
+	animated: false,
+	showClass: false,
+	hideClass: false,
 	dragToClose: false,
+	contentClick: false,
 });
 
 /* ====================================

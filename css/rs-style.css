@@ -723,7 +723,7 @@ textarea.rs-input {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../img/icons/arrow-right.svg");
+  background-image: url("../img/icons/arrow-right.svg");
   -webkit-filter: invert(1);
           filter: invert(1);
   opacity: 0.2;
@@ -766,6 +766,33 @@ textarea.rs-input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.fancybox__container {
+  height: 100%;
+  width: 100%;
+}
+.fancybox__container::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='52' height='52' rx='26' transform='matrix(-1 0 0 1 52 0)' fill='%231DCEE1'/%3e%3cpath d='M32.4269 32.4267L19.5002 19.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M32.4269 19.5733L19.5002 32.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 52px;
+  height: 52px;
+  pointer-events: none;
+}
+
+.fancybox__carousel {
+  padding-top: 50px !important;
+}
+
+.f-thumbs__slide__img {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 
 .swiper {
